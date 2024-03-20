@@ -1,0 +1,33 @@
+{
+  "name": "prime-test-template",
+  "version": "0.0.1",
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "files": [
+    "presets",
+    "tailwind.config.ts"
+  ],
+  "repository": "",
+  "dependencies": {
+    "nuxt": "^3.11.1",
+    "primevue": "^3.50.0",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.18",
+    "nuxt-primevue": "^0.3.1",
+    "postcss": "^8.4.37",
+    "tailwindcss": "^3.4.1"
+  },
+  "peerDependencies": {
+    "primevue": "^3.50.0",
+    "tailwindcss": "^3.4.1"
+  }
+}
