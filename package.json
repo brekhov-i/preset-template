@@ -1,6 +1,6 @@
 {
   "name": "prime-test-template",
-  "version": "0.0.1",
+  "version": "0.0.9",
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -11,10 +11,13 @@
   },
   "files": [
     "presets",
-    "tailwind.config.ts"
+    "tailwind.config.ts",
+    ".eslintrc.cjs",
+    ".prettierrc"
   ],
   "repository": "",
   "dependencies": {
+    "@nuxtjs/tailwindcss": "^6.11.4",
     "nuxt": "^3.11.1",
     "primevue": "^3.50.0",
     "vue": "^3.4.21",

@@ -1,75 +1,49 @@
-# Nuxt 3 Minimal Starter
+# Инструкция использования для Nuxt 3
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## Установить зависимости
 
-## Setup
-
-Make sure to install the dependencies:
 
 ```bash
-# npm
-npm install
+npx nuxi module add @nuxtjs/tailwindcss
 
-# pnpm
-pnpm install
+# Using npm
+npm install primevue
+npm install --save-dev nuxt-primevue
 
-# yarn
-yarn install
+# Using yarn
+yarn add primevue
+yarn add --dev nuxt-primevue
 
-# bun
-bun install
+# Using pnpm
+pnpm add primevue
+pnpm add -D nuxt-primevue
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Нужно вставить в nuxt.config
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+modules: ['nuxt-primevue', "@nuxtjs/tailwindcss"],
+primevue: {
+ options: {
+  unstyled: true,
+  locale: locale,
+  inputStyle: 'outlined',
+  ripple: true,
+ },
+ usePrimeVue: true,
+ importPT: { from: path.resolve(__dirname, './node_modules/prime-test-template/presets/prLg') },
+},
+tailwindcss: {
+ config: {
+  ...tailwindConfig,
+  content: [
+   path.resolve(__dirname, './node_modules/prime-test-template/presets/**/*.{js,vue,ts}'),
+   './components/**/*.{js,vue,ts}',
+   './layouts/**/*.vue',
+   './pages/**/*.vue',
+   './plugins/**/*.{js,ts}',
+   './app.vue',
+   './error.vue',
+  ]
+},
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
