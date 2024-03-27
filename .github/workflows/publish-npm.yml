@@ -1,5 +1,8 @@
 name: npm publish 
 
+on: 
+  release
+
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
