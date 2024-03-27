@@ -1,7 +1,7 @@
 name: npm publish 
 
 on:
-  release:
+  deployment:
     branches: [ "main" ]
 
 jobs:
