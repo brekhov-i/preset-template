@@ -1,7 +1,7 @@
 name: npm publish 
 
 on:
-  commit:
+  push:
     branches: [ "main" ]
 
 jobs:
