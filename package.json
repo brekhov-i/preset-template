@@ -1,6 +1,6 @@
 {
   "name": "prime-test-template",
-  "version": "0.0.9",
+  "version": "1.0.3",
   "type": "module",
   "scripts": {
     "build": "nuxt build",
@@ -10,11 +10,20 @@
     "postinstall": "nuxt prepare"
   },
   "files": [
+    "types/index.ts",
+    "assets/styles/vars.scss",
+    "components/icons",
     "presets",
-    "tailwind.config.ts",
-    ".eslintrc.cjs",
-    ".prettierrc"
+    "tailwind.config.ts"
   ],
+  "exports": {
+    "./icons": "./components/icons.ts",
+    "./preset": "./presets/pl",
+    "./locale": "./presets/pl/locale.ts",
+    "./tailwindcss": "./tailwind.config.ts",
+    "./types": "./types/index.ts",
+    "./style": "./assets/styles/vars.scss"
+  },
   "repository": "",
   "dependencies": {
     "@nuxtjs/tailwindcss": "^6.11.4",
