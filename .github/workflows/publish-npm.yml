@@ -1,9 +1,5 @@
 name: npm publish 
 
-on:
-  deployment:
-    branches: [ "main" ]
-
 jobs:
   publish-npm:
     runs-on: ubuntu-latest
